@@ -1,0 +1,5 @@
+Suspender,~/.config/jgmenu/power_menu/launch.sh SUSPEND &
+Bloquear pantalla,~/.config/jgmenu/power_menu/launch.sh LOCK &
+Reiniciar,~/.config/jgmenu/power_menu/launch.sh REBOOT &
+Apagar,~/.config/jgmenu/power_menu/launch.sh POWEROFF &
+Cerrar sesion,~/.config/jgmenu/power_menu/launch.sh LOGOUT &
