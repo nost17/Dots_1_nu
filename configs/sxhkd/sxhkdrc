@@ -1,0 +1,127 @@
+
+# TERMINAL
+
+super + Return
+    kitty &
+super + KP_Enter
+    kitty &
+# APPS
+
+super + @space
+#    ~/.config/bspwm/scripts/run.sh &
+	rofi -show drun &
+super + shift @space
+	$HOME/.config/rofi/launch/power_menu.sh &
+#    $HOME/.config/bspwm/scripts/power.sh &
+super + m
+	$HOME/.config/rofi/launch/music.sh &
+super + ctrl + m
+	$HOME/.config/rofi/launch/music_selector.sh &
+# REINICAR BSPWM
+super + alt + {q,r}
+	bspc {quit,wm -r}
+# REINICIAR SXHKD
+super + Escape
+	pkill -USR1 -x sxhkd
+
+super + F3
+	~/.config/bspwm/scripts/other/audio_control.sh &
+super + F2
+	~/.config/bspwm/scripts/dmenu/power.sh &
+super + F1
+	~/.config/bspwm/scripts/dmenu/run.sh &
+
+## BSPWM ##
+
+super + shift + q  
+    bspc node -c
+super + shift + w
+    bspc node -k
+super + f
+    bspc node -t {fullscreen,tiled}
+super + shift + f 
+    bspc node -t pseudo_tiled
+super + e
+    bspc desktop -l next
+#super + shift + e
+#	bspc desktop -l tiled
+super + t
+	bspc node -t {floating,tiled}
+super + {_,shift + }Tab
+	bspc node -f {next,prev}.local.!hidden.window
+#super + Tab
+#    bspc node -f next.local
+#super + shift + Tab
+#	bspc node -f prev.local
+    #bspc node -t {floating,tiled}
+super + ctrl + alt +{Left,Right}
+	bspc desktop -f {prev,next}.local
+
+# MOVERSE ENTRE ESCRITORIOS
+super + {_,shift + }{1-6}
+	bspc {desktop -f,node -d} '^{1-6}'
+super + {KP_End,KP_Down,KP_Next,KP_Left,KP_Begin,KP_Right}
+	bspc desktop -f '^{1-6}'
+super + shift + {KP_End,KP_Down,KP_Next,KP_Left,KP_Begin,KP_Right}
+	bspc node -d '^{1-6}'
+
+# VENTANAS
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -p {west,south,north,east}
+
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+super + ctrl + space
+	bspc node -p cancel
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+super + alt + {Left,Down,Up,Right}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+super + alt + shift + {Left,Down,Up,Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+#super + {h,j,u,k}
+#	bspc node -v {-10 0,0 10,0 -10,10 0}
+
+# MULTIMEDIA
+XF86AudioRaiseVolume
+    pamixer -i 1 
+    #amixer set Master 2%+
+XF86AudioLowerVolume
+    pamixer -d 1 
+    #amixer set Master 2%-
+XF86AudioMute
+    pamixer -t 
+    #amixer set Master toggle
+super + KP_Add
+    pamixer -i 1
+super + KP_Subtract
+    pamixer -d 1
+super + shift + KP_Add
+    brightnessctl s 10+
+super + shift + KP_Subtract
+    brightnessctl s 10-
+XF86MonBrightnessDown
+    brightnessctl s 10- 
+XF86MonBrightnessUp
+    brightnessctl s 10+ 
+XF86AudioPlay
+	playerctl -p "$(cat /tmp/player.txt)" play-pause &
+	#playerctl --player=mpd play-pause &
+XF86AudioNext
+	playerctl -p "$(cat /tmp/player.txt)" next &
+	#mpc next &
+XF86AudioPrev
+	playerctl -p "$(cat /tmp/player.txt)" previous &
+	#mpc prev &
+shift + XF86AudioPrev
+	mpc seek -10 &
+shift + XF86AudioNext
+	mpc seek +10 &
+#~button3
+#	bspc query -D -d .focused.!occupied && echo -e "$(cat ~/.config/jgmenu/menu.txt)" | jgmenu --simple
+super + Print
+	~/.config/rofi/launch/screenshot.sh &
+
+Scroll_Lock
+	xset led 3 &
