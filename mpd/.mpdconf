@@ -1,0 +1,32 @@
+
+music_directory			"/home/fiz/Música"
+db_file				"/home/fiz/.mpd/db"
+log_file			"/home/fiz/.mpd/mpd.log"
+pid_file			"/home/fiz/.mpd/mpd.pid"
+state_file			"/home/fiz/.mpd/mpdstate"
+playlist_directory		"/home/fiz/.mpd/playlists"
+#sticker_file			"/home/fiz/.mpd/sticker.sql"
+bind_to_address			"127.0.0.1"
+port				"6600"
+#metadata_to_use	"artist,album,title,track,name,genre,date,composer,performer,disc"
+audio_output {
+	type		"pulse"
+	name		"My Pulse Output"
+##	server		"remote_server"		# optional
+##	sink		"remote_server_sink"	# optional
+##	media_role	"media_role"		#optional
+}
+audio_output {
+    type                    "fifo"
+    name                    "FIFO"
+    path                    "/tmp/mpd.fifo"
+    format                  "44100:16:2"
+}
+#audio_output {
+#	type		"null"
+#	name		"My Null Output"
+#	mixer_type      "none"			# optional
+#}
+#replaygain			"album"
+#replaygain_limit		"yes"
+#volume_normalization		"no"
