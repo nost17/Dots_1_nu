@@ -15,5 +15,7 @@
 ### Fonts:
 - [Material Icons](https://github.com/google/material-design-icons/tree/master/font)
 - [Comfortaa](https://fonts.google.com/specimen/Comfortaa)
+- Favorites
+- MesloLGS NF
 
 Developing...
