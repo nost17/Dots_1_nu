@@ -8,6 +8,7 @@
 - Bar: [Polybar](https://github.com/polybar/polybar)
 - Launcher: [Rofi](https://github.com/davatorium/rofi)
 - Terminal: [Kitty](https://github.com/kovidgoyal/kitty)
+- Compositor: [Picom Ibhagwan Fork](https://github.com/ibhagwan/picom)
 - Music: [Mpd](https://github.com/MusicPlayerDaemon/MPD)
 - Other launcher: [Jgmenu](https://github.com/johanmalm/jgmenu)
 
