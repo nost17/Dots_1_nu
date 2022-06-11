@@ -23,7 +23,7 @@ element{
 }
 element-text {
     border: 2px;
-    padding: 12px 12px;
+    padding: 8px 12px;
     highlight:          bold;
 }
 element-text selected{
@@ -41,8 +41,9 @@ textbox-prompt-colon{
     border-radius: 6px;
     border: 2px;
     border-color: @main;
-    padding: 6px 8px 0px 8px;
+    padding: 0px 8px;
     color: @main;
+    vertical-align: 0.5;
 }
 prompt{
     padding: 10px 12px 0px;
