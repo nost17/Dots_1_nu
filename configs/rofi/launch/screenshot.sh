@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 OP1='Pantalla completa'
 OP2='Seleccionar área'
 OP3='Solo la ventana activa'

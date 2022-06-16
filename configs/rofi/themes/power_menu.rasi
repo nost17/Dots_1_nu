@@ -3,9 +3,11 @@
 
 configuration{
     drun-display-format: "{name}";
-    disable-history:    false;
-    hover-select:       false;
+    disable-history:    true;
+    hover-select:       true;
     modi: [run, drun];
+	me-select-entry: "";
+	me-accept-entry: "MousePrimary";
 }
 *{
     font:             @font-text;

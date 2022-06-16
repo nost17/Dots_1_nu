@@ -6,9 +6,11 @@ configuration{
     disable-history:    false;
     display-drun:       "";
     display-run:        "";
-    hover-select:       false;
+    hover-select:       true;
     modi: [run, drun];
-}
+	me-select-entry: "";
+	me-accept-entry: "MousePrimary";
+} 
 *{
     font:             @font-text;
     background-color: @bg;
