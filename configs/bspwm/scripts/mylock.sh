@@ -1,7 +1,7 @@
-#!/usr/bin/dash
+#!/bin/bash
 
-WALL="$HOME/Imágenes/FONDO_BLOQ_BAC.jpg"
 #BLACK='#1e2127'
+WALL="$HOME/.config/bspwm/wallpaper.png"
 BLACK='#00000000'
 YELLOW='#e5c07b'
 RED='#f46e88'

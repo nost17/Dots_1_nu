@@ -1,0 +1,16 @@
+// ASSETS FOR ROFI THEME
+* {
+	// FONT
+  font-icon: "Material Icons 22";
+	font-text: "Comfortaa 16";
+	// COLORS
+	black: 	#1d272e;
+	red:		#E06E6E;
+	green:	#8CCF7E;
+	yellow: #E5C76B;
+	blue:		#7AA2F7;
+	magenta:#b48cff; 
+	orange:	#D49474;
+	fg:			#BDC3C2;
+	bg:			#0F1417;
+}

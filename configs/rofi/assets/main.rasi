@@ -1,0 +1,110 @@
+//    
+@import "assets.rasi"
+
+*{
+	font: @font-text;
+	background-color: transparent;
+	main: @blue;
+}
+configuration{
+	drun-display-format: "{name}";
+	hover-select: true;
+	me-select-entry: "";
+	me-accept-entry: "mouseprimary";
+	display-drun: "  ";
+	display-run: "  ";
+	show-icons: false;
+	modi: [drun,run];
+}
+element-text .selected{
+	background-color: @main;
+	border-color: @main;
+	text-color: @bg;
+	border-radius: 10px;
+}
+element-text{
+	vertical-align: 0.5;
+	//text-color: #8e9e9b;
+	color: @fg;
+	padding: 8px 15px;
+	highlight: bold;
+	border: 0px;
+}
+element{
+	background-color: transparent;
+	spacing: 0;
+}
+element .selected{
+	background-color: @black;
+	border-radius: 10px;
+}
+element-icon{
+	size: 32;
+	padding: 0 10px;
+}
+element-icon .selected{
+	background-color: @black;
+}
+listview{
+	padding: 10px 0 0 0;
+	spacing: 10px;
+}
+textbox{
+  expand: false;
+  content: "  ";
+	font: @font-icon;
+	border: 0;
+	vertical-align: 0.5;
+	color: @main;
+	horizontal-align: 0.5;
+	background-color: #141b1f;
+	padding: 0;
+	border-radius: 10px;
+}
+prompt{
+	font: @font-text;
+	border: 0;
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	background-color: @main;
+	padding: 0;
+	border-radius: 10px;
+}
+entry{
+	border-radius: 10px;
+	vertical-align: 0.5;
+	padding: 0 16px;
+	text-color: @main;
+	font: @font-text;
+	background-color: transparent;
+	placeholder: "Buscar";
+	//placeholder-color: #BDC3C2a1;
+	placeholder-color: @main;
+}
+inputbar{
+	spacing: 8px;
+	border-color: @main;
+	border: 0;
+	padding: 0;
+	children: [entry];
+	background-color: transparent;
+}
+mainbox{
+	children: [inputbar,listview];
+	padding: 10px;
+	spacing: 10px;
+}
+
+window{
+	height: 600px;
+  width: 380px;
+	padding: 10px;
+	children: [mainbox];
+	location: west;
+	y-offset: 0;
+	background-color: @bg;
+	border: 0;
+	//border: 3px 3px 3px 0;
+	border-color: @black;
+	border-radius: 0 10px 10px 0;
+}

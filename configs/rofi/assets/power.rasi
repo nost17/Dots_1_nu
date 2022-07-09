@@ -1,0 +1,98 @@
+//    
+@import "assets.rasi"
+
+*{
+	font: @font-text;
+	background-color: transparent;
+	main: @red;
+}
+configuration{
+	hover-select: true;
+	show-icons: false;
+	me-select-entry: "";
+	me-accept-entry: "mouseprimary";
+}
+element-text .selected{
+	background-color: @main;
+	border: 0;
+	text-color: @bg;
+	border-radius: 10px;
+}
+element-text{
+	vertical-align: 0.5;
+	horizontal-align: 1;
+	text-color: @fg;
+	//text-color: #8e9e9b;
+	padding: 8px 15px;
+	highlight: bold;
+}
+element{
+	border-radius: 10px;
+	background-color: transparent;
+	spacing: 0;
+}
+listview{
+	padding: 10px 0 0 0;
+	spacing: 10px;
+}
+textbox{
+	font: @font-icon;
+	expand: false;
+	border: 0;
+	content: "  ";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	background-color: @main;
+	padding: 0;
+	border-radius: 10px;
+}
+textbox2{
+	background-color: transparent;
+	color: transparent;
+	content: "  ";
+	expand: true;
+}
+prompt{
+	border-radius: 10px;
+	vertical-align: 0.5;
+	padding: 0 16px;
+	text-color: @main;
+	font: @font-text;
+	background-color: transparent;
+}
+inputbar{
+	spacing: 8px;
+	border-color: @main;
+	border: 0;
+	padding: 0;
+	children: [textbox2,prompt];
+	background-color: transparent;
+}
+mainbox{
+	children: [inputbar,listview];
+	padding: 10px;
+	spacing: 10px;
+}
+element-text .active{
+	text-color: @green;
+}
+element-text selected .active , element-text selected .urgent{
+	background-color: @red;
+} 
+element-text .urgent{
+	color: @red;
+}
+
+window{
+	height: 340px;
+  width: 300px;
+	padding: 10px;
+	children: [mainbox];
+	location: east;
+	y-offset: 0;
+	background-color: @bg;
+	border: 0;
+	//border: 3px 0 3px 3px;
+	border-color: @black;
+	border-radius: 10px 0 0 10px;
+}
